@@ -196,47 +196,9 @@
 			</div>
 		</div>
 	</footer>
-    <script>
-        function initMap () {
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom : 3,
-                center: {
-                    lat: 59.324862,
-                    lng: 18.071113
-                }
-            });
-
-        var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-        var locations = [{
-                lat: 59.334034 , 
-                lng: 18.066329
-            }, {
-                lat: 59.337103 , 
-                lng: 18.062611
-            }, {
-                lat: 59.402372 , 
-                lng: 17.944621
-            }];
-
-
-         var markers = locations.map(function(location, i) {
-                return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length]
-                });
-            });
-
-        
-
-         var markerCluster = new MarkerClusterer(map, markers,{
-             imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-             });
-
-    }
-    </script>
      <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqlBXLGV-aPgqtISgIs0oTHskF_fa0dMA&callback=initMap"></script>
+    <script src= "assets/js/maps.js"></script>
     <!--Async loads the script at the same time as the HTML is loading, brief pause while script is executed-->
     <!-- Defer waits until the page has finished loading before the script is executed. If used in <head>, use defer tag to load script -->
 
